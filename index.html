@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌴 Guris Theft Auto 🧉 | Comunidade Oficial GTA 6</title>
+    
+    <!-- Meta Tags para Redes Sociais (OpenGraph) -->
+    <meta name="description" content="A maior comunidade de GTA 6 do Brasil! O chimarrão é amargo e o asfalto de Vice City ferve. Entre no nosso Discord, junte-se ao Comando Rockstar [GURI] e assista às lives!">
+    <meta property="og:title" content="🌴 Guris Theft Auto 🧉 | Comunidade GTA 6">
+    <meta property="og:description" content="Onde o chimarrão é amargo e o asfalto de Vice City ferve. Conecte-se ao nosso QG no Discord, Comando Rockstar Games e transmissões.">
+    <meta property="og:image" content="assets/emblem.png">
+    <meta property="og:url" content="https://guristheftauto.github.io/">
+    <meta name="theme-color" content="#ff007f">
+    
+    <link rel="icon" type="image/png" href="assets/emblem.png">
+    
+    <!-- Google Fonts & Font Awesome Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <style>
+        :root {
+            --bg-dark: #07060b;
+            --bg-card: rgba(20, 15, 30, 0.78);
+            --bg-card-hover: rgba(32, 23, 50, 0.96);
+            --neon-pink: #ff007f;
+            --neon-pink-glow: rgba(255, 0, 127, 0.5);
+            --neon-cyan: #00f0ff;
+            --neon-cyan-glow: rgba(0, 240, 255, 0.45);
+            --sunset-orange: #ff7b00;
+            --sunset-gold: #ffa200;
+            --ribbon-purple: #5a189a;
+            --rockstar-gold: #ffb703;
+            --rockstar-gold-glow: rgba(255, 183, 3, 0.5);
+            --text-main: #ffffff;
+            --text-muted: #c4bfd6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: 'Montserrat', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 50% 10%, rgba(255, 0, 127, 0.22) 0%, transparent 52%),
+                radial-gradient(circle at 82% 78%, rgba(0, 240, 255, 0.14) 0%, transparent 48%),
+                radial-gradient(circle at 18% 65%, rgba(90, 24, 154, 0.22) 0%, transparent 50%),
+                radial-gradient(circle at 50% 90%, rgba(255, 123, 0, 0.12) 0%, transparent 50%);
+            background-attachment: fixed;
+        }
+
+        /* Linhas do Synthwave Grid no Rodapé */
+        .grid-overlay {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 38vh;
+            background: linear-gradient(180deg, transparent 0%, rgba(255, 0, 127, 0.08) 100%),
+                        repeating-linear-gradient(90deg, rgba(0, 240, 255, 0.06) 0, rgba(0, 240, 255, 0.06) 1px, transparent 1px, transparent 42px),
+                        repeating-linear-gradient(0deg, rgba(255, 0, 127, 0.06) 0, rgba(255, 0, 127, 0.06) 1px, transparent 1px, transparent 42px);
+            transform: perspective(300px) rotateX(60deg);
+            transform-origin: bottom center;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 640px;
+            padding: 36px 18px 60px 18px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* HEADER SECTION */
+        .profile-header {
+            text-align: center;
+            margin-bottom: 24px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .avatar-wrap {
+            position: relative;
+            width: 140px;
+            height: 140px;
+            margin-bottom: 16px;
+        }
+
+        .avatar-img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            filter: drop-shadow(0 0 20px var(--neon-pink-glow)) drop-shadow(0 0 35px var(--neon-cyan-glow));
+            transition: transform 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .avatar-wrap:hover .avatar-img {
+            transform: scale(1.08) rotate(2deg);
+            filter: drop-shadow(0 0 30px var(--neon-pink)) drop-shadow(0 0 50px var(--neon-cyan));
+        }
+
+        .live-tag {
+            position: absolute;
+            bottom: -2px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, #e60067, #ff0055);
+            color: #fff;
+            font-size: 0.72rem;
+            font-weight: 800;
+            padding: 4px 14px;
+            border-radius: 20px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            box-shadow: 0 0 16px rgba(255, 0, 85, 0.7);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            white-space: nowrap;
+        }
+
+        .live-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #fff;
+            border-radius: 50%;
+            animation: pulse-dot 1.2s infinite ease-in-out;
+        }
+
+        @keyframes pulse-dot {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.3; transform: scale(0.6); }
+        }
+
+        .title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.85rem;
+            font-weight: 900;
+            letter-spacing: 0.8px;
+            background: linear-gradient(135deg, #ffffff 25%, var(--neon-cyan) 65%, var(--neon-pink) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 32px rgba(0, 240, 255, 0.35);
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .badge-sub {
+            display: inline-block;
+            background: linear-gradient(90deg, rgba(255, 0, 127, 0.15), rgba(0, 240, 255, 0.15));
+            color: var(--neon-pink);
+            border: 1px solid rgba(255, 0, 127, 0.4);
+            font-size: 0.75rem;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            padding: 4px 16px;
+            border-radius: 50px;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+        }
+
+        .bio {
+            color: var(--text-muted);
+            font-size: 0.92rem;
+            line-height: 1.55;
+            max-width: 480px;
+            margin-bottom: 18px;
+        }
+
+        /* SOCIAL BAR ICONS */
+        .social-bar {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .social-icon-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: all 0.25s ease;
+        }
+
+        .social-icon-btn:hover {
+            transform: translateY(-4px);
+            background: var(--neon-pink);
+            border-color: var(--neon-pink);
+            box-shadow: 0 0 20px var(--neon-pink-glow);
+            color: #fff;
+        }
+
+        .social-icon-btn.rockstar-icon:hover {
+            background: var(--rockstar-gold);
+            border-color: var(--rockstar-gold);
+            box-shadow: 0 0 20px var(--rockstar-gold-glow);
+            color: #000;
+        }
+
+        /* LINKS SECTION */
+        .links-stack {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 13px;
+        }
+
+        .link-card {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            padding: 15px 18px;
+            background: var(--bg-card);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            text-decoration: none;
+            color: var(--text-main);
+            transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+            backdrop-filter: blur(12px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .link-card::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 4px;
+            background: transparent;
+            transition: background 0.25s ease;
+        }
+
+        .link-card:hover {
+            background: var(--bg-card-hover);
+            transform: translateY(-3px) scale(1.01);
+            border-color: rgba(255, 0, 127, 0.45);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 0, 127, 0.25);
+        }
+
+        .link-card:hover::before {
+            background: var(--neon-pink);
+        }
+
+        /* CARD DESTAQUE 1 (DISCORD) */
+        .link-card.featured-discord {
+            background: linear-gradient(135deg, rgba(88, 101, 242, 0.28) 0%, rgba(255, 0, 127, 0.22) 100%);
+            border: 1.5px solid var(--neon-pink);
+            box-shadow: 0 0 25px var(--neon-pink-glow);
+            animation: pulse-pink 3.5s infinite alternate ease-in-out;
+        }
+
+        @keyframes pulse-pink {
+            0% { box-shadow: 0 0 15px var(--neon-pink-glow); border-color: var(--neon-pink); }
+            100% { box-shadow: 0 0 35px rgba(0, 240, 255, 0.5); border-color: var(--neon-cyan); }
+        }
+
+        .link-card.featured-discord::before {
+            background: var(--neon-cyan);
+        }
+
+        /* CARD DESTAQUE 2 (COMANDO ROCKSTAR GAMES) */
+        .link-card.featured-rockstar {
+            background: linear-gradient(135deg, rgba(255, 183, 3, 0.22) 0%, rgba(252, 175, 23, 0.12) 100%);
+            border: 1.5px solid var(--rockstar-gold);
+            box-shadow: 0 0 22px var(--rockstar-gold-glow);
+            animation: pulse-gold 3.5s infinite alternate ease-in-out;
+        }
+
+        @keyframes pulse-gold {
+            0% { box-shadow: 0 0 15px var(--rockstar-gold-glow); border-color: var(--rockstar-gold); }
+            100% { box-shadow: 0 0 32px rgba(255, 215, 0, 0.6); border-color: #ffd700; }
+        }
+
+        .link-card.featured-rockstar::before {
+            background: var(--rockstar-gold);
+        }
+
+        .card-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.35rem;
+            margin-right: 14px;
+            flex-shrink: 0;
+            transition: transform 0.25s ease;
+        }
+
+        .link-card:hover .card-icon {
+            transform: scale(1.12);
+        }
+
+        .card-icon.discord { color: #5865f2; }
+        .card-icon.rockstar { color: var(--rockstar-gold); }
+        .card-icon.twitch { color: #9146ff; }
+        .card-icon.youtube { color: #ff0000; }
+        .card-icon.tiktok { color: #00f0ff; }
+        .card-icon.instagram { color: #e1306c; }
+        .card-icon.twitter { color: #1da1f2; }
+        .card-icon.pinterest { color: #e60023; }
+        .card-icon.steam { color: #66c0f4; }
+        .card-icon.beacons { color: #ff007f; }
+
+        .card-text {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+        }
+
+        .card-title-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 2px;
+        }
+
+        .card-title {
+            font-size: 0.96rem;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+        }
+
+        .tag-pill {
+            background: var(--rockstar-gold);
+            color: #000;
+            font-size: 0.68rem;
+            font-weight: 900;
+            padding: 2px 7px;
+            border-radius: 6px;
+            letter-spacing: 0.5px;
+        }
+
+        .card-desc {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .card-arrow {
+            color: rgba(255, 255, 255, 0.3);
+            font-size: 1.05rem;
+            margin-left: 10px;
+            transition: transform 0.25s ease, color 0.25s ease;
+        }
+
+        .link-card:hover .card-arrow {
+            transform: translateX(4px);
+            color: var(--neon-cyan);
+        }
+
+        /* FOOTER */
+        footer {
+            margin-top: 36px;
+            text-align: center;
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.4);
+            line-height: 1.6;
+        }
+
+        footer strong {
+            color: var(--neon-pink);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="grid-overlay"></div>
+
+    <main class="container">
+        <!-- HEADER -->
+        <header class="profile-header">
+            <div class="avatar-wrap">
+                <img src="assets/emblem.png" alt="Guris Theft Auto" class="avatar-img">
+                <div class="live-tag">
+                    <span class="live-dot"></span>
+                    <span>ONLINE</span>
+                </div>
+            </div>
+
+            <h1 class="title">🌴 Guris Theft Auto 🧉</h1>
+            <div class="badge-sub">🌴 Comunidade Oficial GTA 6 🧉</div>
+            <p class="bio">
+                Onde o chimarrão é amargo e o asfalto de Vice City ferve. Entre no nosso QG, participe dos heists e venha jogar junto com os guris!
+            </p>
+
+            <!-- ICONES SOCIAIS RÁPIDOS -->
+            <div class="social-bar">
+                <a href="https://discord.gg/AShVzsztbK" target="_blank" class="social-icon-btn" title="Discord Oficial"><i class="fa-brands fa-discord"></i></a>
+                <a href="https://socialclub.rockstargames.com/crew/guris_theft_auto" target="_blank" class="social-icon-btn rockstar-icon" title="Comando Rockstar Games [GURI]"><i class="fa-solid fa-star"></i></a>
+                <a href="https://twitch.tv/guristheftauto" target="_blank" class="social-icon-btn" title="Twitch"><i class="fa-brands fa-twitch"></i></a>
+                <a href="https://youtube.com/@guristheftauto" target="_blank" class="social-icon-btn" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://tiktok.com/@guristheftauto" target="_blank" class="social-icon-btn" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="https://instagram.com/guristheftauto" target="_blank" class="social-icon-btn" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://x.com/guristheftauto" target="_blank" class="social-icon-btn" title="Twitter / X"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://steamcommunity.com/groups/gurirs" target="_blank" class="social-icon-btn" title="Comunidade Steam"><i class="fa-brands fa-steam"></i></a>
+                <a href="https://pinterest.com/smguristheftauto" target="_blank" class="social-icon-btn" title="Pinterest"><i class="fa-brands fa-pinterest"></i></a>
+            </div>
+        </header>
+
+        <!-- PILHA DE LINKS OFICIAIS -->
+        <section class="links-stack">
+            <!-- 1. DISCORD (DESTAQUE NEON PINK) -->
+            <a href="https://discord.gg/AShVzsztbK" target="_blank" class="link-card featured-discord">
+                <div class="card-icon discord"><i class="fa-brands fa-discord"></i></div>
+                <div class="card-text">
+                    <span class="card-title">DISCORD OFICIAL (QG DOS GURIS)</span>
+                    <span class="card-desc">Canais de voz, heists, sorteios e resenha diária</span>
+                </div>
+                <div class="card-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+            </a>
+
+            <!-- 2. ROCKSTAR SOCIAL CLUB (DESTAQUE GOLD VIP) -->
+            <a href="https://socialclub.rockstargames.com/crew/guris_theft_auto" target="_blank" class="link-card featured-rockstar">
+                <div class="card-icon rockstar"><i class="fa-solid fa-star"></i></div>
+                <div class="card-text">
+                    <div class="card-title-row">
+                        <span class="card-title">COMANDO ROCKSTAR SOCIAL CLUB</span>
+                        <span class="tag-pill">[GURI]</span>
+                    </div>
+                    <span class="card-desc">Entre para a nossa Crew no GTA Online & reserve vaga no GTA VI</span>
+                </div>
+                <div class="card-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+            </a>
+
+            <!-- 3. TWITCH -->
+            <a href="https://twitch.tv/guristheftauto" target="_blank" class="link-card">
+                <div class="card-icon twitch"><i class="fa-brands fa-twitch"></i></div>
+                <div class="card-text">
+                    <span class="card-title">TWITCH — TRANSMISSÕES AO VIVO</span>
+                    <span class="card-desc">Lives do Patrão, GTA Online, RP e novidades de GTA VI</span>
+                </div>
+                <div class="card-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+            </a>
+
+            <!-- 4. YOUTUBE -->
+            <a href="https://youtube.com/@guristheftauto" target="_blank" class="link-card">
+                <div class="card-icon youtube"><i class="fa-brands fa-youtube"></i></div>
+                <div class="card-text">
+                    <span class="card-title">YOUTUBE OFICIAL</span>
+                    <span class="card-desc">Shorts, análises de trailers, lore e documentários</span>
+                </div>
+                <div class="card-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+            </a>
+
+            <!-- 5. TIKTOK -->
+            <a href="https://tiktok.com/@guristheftauto" target="_blank" class="link-card">
+                <div class="card-icon tiktok"><i class="fa-brands fa-tiktok"></i></div>
+                <div class="card-text">
+                    <span class="card-title">TIKTOK DOS GURIS</span>
+                    <span class="card-desc">Clipes virais, memes e bastidores no formato vertical</span>
+                </div>
+                <div class="card-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+            </a>
+
+            <!-- 6. INSTAGRAM -->
+            <a href="https://instagram.com/guristheftauto" target="_blank" class="link-card">
+                <div class="card-icon instagram"><i class="fa-brands fa-instagram"></i></div>
+                <div class="card-text">
+                    <span class="card-title">INSTAGRAM OFICIAL</span>
+                    <span class="card-desc">Stories do dia a dia, avisos rápidos e novidades</span>
+                </div>
+                <div class="card-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+            </a>
+
+            <!-- 7. TWITTER / X -->
+            <a href="https://x.com/guristheftauto" target="_blank" class="link-card">
+                <div class="card-icon twitter"><i class="fa-brands fa-x-twitter"></i></div>
+                <div class="card-text">
+                    <span class="card-title">TWITTER / X (RADAR GTA 6)</span>
+                    <span class="card-desc">Leaks, comunicados da Rockstar e atualizações</span>
+                </div>
+                <div class="card-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+            </a>
+
+            <!-- 8. STEAM -->
+            <a href="https://steamcommunity.com/groups/gurirs" target="_blank" class="link-card">
+                <div class="card-icon steam"><i class="fa-brands fa-steam"></i></div>
+                <div class="card-text">
+                    <span class="card-title">GRUPO STEAM OFICIAL</span>
+                    <span class="card-desc">Comunidade de jogadores no PC para heists e coop</span>
+                </div>
+                <div class="card-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+            </a>
+
+            <!-- 9. PINTEREST -->
+            <a href="https://pinterest.com/smguristheftauto" target="_blank" class="link-card">
+                <div class="card-icon pinterest"><i class="fa-brands fa-pinterest"></i></div>
+                <div class="card-text">
+                    <span class="card-title">PINTEREST (GALERIA & ARTES)</span>
+                    <span class="card-desc">Wallpapers 4K, posters neon e estética Vice City</span>
+                </div>
+                <div class="card-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+            </a>
+
+            <!-- 10. BEACONS -->
+            <a href="https://beacons.ai/guristheftauto" target="_blank" class="link-card">
+                <div class="card-icon beacons"><i class="fa-solid fa-link"></i></div>
+                <div class="card-text">
+                    <span class="card-title">BEACONS.AI OFICIAL</span>
+                    <span class="card-desc">Agregador complementar e central de apoio</span>
+                </div>
+                <div class="card-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+            </a>
+        </section>
+
+        <!-- FOOTER -->
+        <footer>
+            <p>© 2026 <strong>🌴 Guris Theft Auto 🧉</strong> • Todos os direitos reservados.</p>
+            <p>Onde o chimarrão é amargo e o asfalto de Vice City ferve.</p>
+        </footer>
+    </main>
+
+</body>
+</html>
