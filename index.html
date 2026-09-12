@@ -312,6 +312,23 @@
             background: var(--rockstar-gold);
         }
 
+        /* CARD DESTAQUE PROMPTS GTA VI */
+        .link-card.featured-prompts {
+            background: linear-gradient(135deg, rgba(0, 240, 255, 0.22) 0%, rgba(255, 0, 127, 0.26) 100%);
+            border: 1.5px solid var(--neon-cyan);
+            box-shadow: 0 0 25px var(--neon-cyan-glow);
+            animation: pulse-cyan 3.5s infinite alternate ease-in-out;
+        }
+
+        @keyframes pulse-cyan {
+            0% { box-shadow: 0 0 16px var(--neon-cyan-glow); border-color: var(--neon-cyan); }
+            100% { box-shadow: 0 0 32px var(--neon-pink-glow); border-color: var(--neon-pink); }
+        }
+
+        .link-card.featured-prompts::before {
+            background: linear-gradient(180deg, var(--neon-cyan), var(--neon-pink));
+        }
+
         .card-icon {
             width: 44px;
             height: 44px;
@@ -330,6 +347,7 @@
             transform: scale(1.12);
         }
 
+        .card-icon.prompts-icon { color: var(--neon-cyan); }
         .card-icon.discord { color: #5865f2; }
         .card-icon.rockstar { color: var(--rockstar-gold); }
         .card-icon.twitch { color: #9146ff; }
@@ -442,6 +460,19 @@
 
         <!-- PILHA DE LINKS OFICIAIS -->
         <section class="links-stack">
+            <!-- 0. GALERIA DE PROMPTS GTA VI & VICE CITY (NOVIDADE VIP) -->
+            <a href="prompts/" class="link-card featured-prompts">
+                <div class="card-icon prompts-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                <div class="card-text">
+                    <div class="card-title-row">
+                        <span class="card-title">GALERIA DE PROMPTS GTA VI & VICE CITY</span>
+                        <span class="tag-pill" style="background: var(--neon-pink); color: #fff; border-color: var(--neon-pink);">NOVO</span>
+                    </div>
+                    <span class="card-desc">Combos de prompts para recriar fotos pessoais no estilo oficial da Rockstar</span>
+                </div>
+                <div class="card-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+            </a>
+
             <!-- 1. COMANDO ROCKSTAR SOCIAL CLUB (DESTAQUE GOLD VIP) -->
             <a href="https://socialclub.rockstargames.com/crew/guris_theft_auto" target="_blank" class="link-card featured-rockstar">
                 <div class="card-icon rockstar"><i class="fa-solid fa-star"></i></div>
