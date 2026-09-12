@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌴 Galeria de Prompts GTA VI & Vice City 🧉 | Guris Theft Auto</title>
+    
+    <!-- Meta Tags -->
+    <meta name="description" content="Transforme suas fotos no estilo oficial de GTA VI e Vice City. Galeria com combos de prompts e fotos de referência para IA (Midjourney, Fooocus, SeaArt).">
+    <meta property="og:title" content="🌴 Galeria de Prompts GTA VI & Vice City 🧉">
+    <meta property="og:description" content="Combos exclusivos de prompts para transformar suas fotos em arte da Rockstar Games.">
+    <meta property="og:image" content="../assets/banner.jpg">
+    <meta property="og:url" content="https://guristheftauto.github.io/prompts/">
+    <meta name="theme-color" content="#ff007f">
+    
+    <link rel="icon" type="image/png" href="../assets/emblem.png">
+    
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Orbitron:wght@700;900&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <style>
+        :root {
+            --bg-dark: #07060b;
+            --bg-card: rgba(20, 15, 30, 0.85);
+            --bg-card-hover: rgba(30, 22, 48, 0.95);
+            --bg-input: rgba(12, 9, 20, 0.9);
+            --neon-pink: #ff007f;
+            --neon-pink-glow: rgba(255, 0, 127, 0.45);
+            --neon-cyan: #00f0ff;
+            --neon-cyan-glow: rgba(0, 240, 255, 0.4);
+            --sunset-orange: #ff7b00;
+            --rockstar-gold: #ffb703;
+            --text-main: #ffffff;
+            --text-muted: #b8b2cd;
+            --success: #00f59b;
+            --border-subtle: rgba(255, 255, 255, 0.08);
+            --border-focus: rgba(0, 240, 255, 0.6);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: 'Montserrat', sans-serif;
+            min-height: 100vh;
+            background-image: 
+                radial-gradient(circle at 50% 5%, rgba(255, 0, 127, 0.18) 0%, transparent 45%),
+                radial-gradient(circle at 90% 40%, rgba(0, 240, 255, 0.12) 0%, transparent 40%),
+                radial-gradient(circle at 10% 70%, rgba(255, 123, 0, 0.12) 0%, transparent 40%);
+            background-attachment: fixed;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Linhas do Synthwave Grid no Rodapé */
+        .grid-overlay {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 30vh;
+            background: linear-gradient(180deg, transparent 0%, rgba(255, 0, 127, 0.06) 100%),
+                        repeating-linear-gradient(90deg, rgba(0, 240, 255, 0.04) 0, rgba(0, 240, 255, 0.04) 1px, transparent 1px, transparent 40px),
+                        repeating-linear-gradient(0deg, rgba(255, 0, 127, 0.04) 0, rgba(255, 0, 127, 0.04) 1px, transparent 1px, transparent 40px);
+            transform: perspective(300px) rotateX(60deg);
+            transform-origin: bottom center;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1120px;
+            padding: 24px 16px 80px 16px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* HEADER NAV */
+        .nav-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 28px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid var(--border-subtle);
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .back-link {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.88rem;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--border-subtle);
+            border-radius: 50px;
+            transition: all 0.2s ease;
+        }
+
+        .back-link:hover {
+            color: var(--neon-cyan);
+            border-color: var(--neon-cyan);
+            transform: translateX(-3px);
+            background: rgba(0, 240, 255, 0.08);
+        }
+
+        .nav-community {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            color: var(--rockstar-gold);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .nav-community img {
+            width: 32px;
+            height: 32px;
+            object-fit: contain;
+            filter: drop-shadow(0 0 8px var(--neon-pink-glow));
+        }
+
+        /* HERO SECTION */
+        .hero {
+            text-align: center;
+            margin-bottom: 36px;
+        }
+
+        .badge-live {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(90deg, rgba(255, 0, 127, 0.2), rgba(0, 240, 255, 0.2));
+            color: var(--neon-cyan);
+            border: 1px solid rgba(0, 240, 255, 0.4);
+            font-size: 0.75rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            padding: 6px 18px;
+            border-radius: 50px;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+        }
+
+        .hero-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(1.8rem, 4.5vw, 2.8rem);
+            font-weight: 900;
+            letter-spacing: 1px;
+            background: linear-gradient(135deg, #ffffff 20%, var(--neon-cyan) 60%, var(--neon-pink) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 12px;
+            line-height: 1.18;
+        }
+
+        .hero-subtitle {
+            color: var(--text-muted);
+            font-size: 1rem;
+            max-width: 680px;
+            margin: 0 auto 24px auto;
+            line-height: 1.6;
+        }
+
+        /* HOW IT WORKS / TUTORIAL BOX */
+        .tutorial-card {
+            background: rgba(18, 12, 28, 0.7);
+            border: 1px solid rgba(255, 0, 127, 0.25);
+            border-radius: 16px;
+            padding: 20px 24px;
+            margin-bottom: 32px;
+            text-align: left;
+            backdrop-filter: blur(10px);
+        }
+
+        .tutorial-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .tutorial-header h3 {
+            font-size: 0.98rem;
+            font-weight: 800;
+            color: var(--neon-pink);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .tutorial-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+            margin-top: 18px;
+            padding-top: 16px;
+            border-top: 1px solid var(--border-subtle);
+        }
+
+        .step-item {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+        }
+
+        .step-num {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--neon-pink), var(--sunset-orange));
+            color: #fff;
+            font-weight: 900;
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            box-shadow: 0 0 12px var(--neon-pink-glow);
+        }
+
+        .step-text h4 {
+            font-size: 0.88rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+            color: #fff;
+        }
+
+        .step-text p {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            line-height: 1.45;
+        }
+
+        /* CONTROLS: TABS & SEARCH */
+        .controls-bar {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-bottom: 30px;
+        }
+
+        .tabs-list {
+            display: flex;
+            gap: 10px;
+            overflow-x: auto;
+            padding-bottom: 8px;
+            scrollbar-width: thin;
+            scrollbar-color: var(--neon-pink) transparent;
+        }
+
+        .tab-btn {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-subtle);
+            color: var(--text-muted);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.86rem;
+            font-weight: 700;
+            padding: 10px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            white-space: nowrap;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.25s ease;
+        }
+
+        .tab-btn:hover {
+            color: #fff;
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.25);
+        }
+
+        .tab-btn.active {
+            background: linear-gradient(135deg, var(--neon-pink), #a00050);
+            color: #fff;
+            border-color: var(--neon-pink);
+            box-shadow: 0 0 18px var(--neon-pink-glow);
+        }
+
+        .search-wrap {
+            position: relative;
+            width: 100%;
+        }
+
+        .search-wrap i {
+            position: absolute;
+            left: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 12px 18px 12px 46px;
+            background: var(--bg-input);
+            border: 1px solid var(--border-subtle);
+            border-radius: 12px;
+            color: #fff;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9rem;
+            outline: none;
+            transition: all 0.2s ease;
+        }
+
+        .search-input:focus {
+            border-color: var(--neon-cyan);
+            box-shadow: 0 0 16px var(--neon-cyan-glow);
+        }
+
+        /* SECTION STYLES */
+        .style-section {
+            margin-bottom: 48px;
+        }
+
+        .style-header {
+            margin-bottom: 22px;
+            padding-left: 12px;
+            border-left: 4px solid var(--neon-pink);
+        }
+
+        .style-badge-tag {
+            font-size: 0.72rem;
+            font-weight: 800;
+            color: var(--neon-cyan);
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+            display: block;
+        }
+
+        .style-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.45rem;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 6px;
+        }
+
+        .style-desc {
+            color: var(--text-muted);
+            font-size: 0.88rem;
+            max-width: 720px;
+            line-height: 1.5;
+        }
+
+        /* PROMPTS GRID */
+        .prompts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+            gap: 22px;
+        }
+
+        .prompt-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 18px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(8px);
+            position: relative;
+        }
+
+        .prompt-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(0, 240, 255, 0.4);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 240, 255, 0.15);
+        }
+
+        /* IMAGE WRAPPER */
+        .card-img-wrap {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 4 / 5;
+            overflow: hidden;
+            background: #000;
+            cursor: pointer;
+        }
+
+        .card-img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .prompt-card:hover .card-img-wrap img {
+            transform: scale(1.05);
+        }
+
+        .card-zoom-badge {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 5px 10px;
+            border-radius: 20px;
+            backdrop-filter: blur(4px);
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            opacity: 0.85;
+            transition: opacity 0.2s ease;
+        }
+
+        .card-img-wrap:hover .card-zoom-badge {
+            opacity: 1;
+            background: var(--neon-pink);
+        }
+
+        .card-id-badge {
+            position: absolute;
+            bottom: 12px;
+            left: 12px;
+            background: rgba(7, 6, 11, 0.85);
+            color: var(--neon-cyan);
+            border: 1px solid rgba(0, 240, 255, 0.4);
+            font-size: 0.7rem;
+            font-weight: 800;
+            padding: 4px 10px;
+            border-radius: 8px;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+        }
+
+        /* CARD BODY */
+        .card-body {
+            padding: 18px 16px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .card-title {
+            font-size: 0.98rem;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 10px;
+            line-height: 1.35;
+        }
+
+        .tags-row {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+            margin-bottom: 12px;
+        }
+
+        .tag-pill {
+            font-size: 0.68rem;
+            font-weight: 700;
+            color: var(--text-muted);
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-subtle);
+            padding: 3px 8px;
+            border-radius: 6px;
+        }
+
+        /* PROMPT TEXT BOX */
+        .prompt-box {
+            background: rgba(8, 6, 13, 0.95);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 10px;
+            padding: 12px;
+            font-family: 'Fira Code', monospace;
+            font-size: 0.76rem;
+            color: #d1cbe5;
+            line-height: 1.5;
+            max-height: 110px;
+            overflow-y: auto;
+            margin-bottom: 14px;
+            scrollbar-width: thin;
+            scrollbar-color: var(--neon-pink) transparent;
+            position: relative;
+        }
+
+        /* COPY BUTTON */
+        .btn-copy {
+            width: 100%;
+            background: linear-gradient(135deg, var(--neon-pink), #d6006b);
+            border: none;
+            color: #fff;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.88rem;
+            font-weight: 800;
+            padding: 12px 16px;
+            border-radius: 12px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: all 0.25s ease;
+            box-shadow: 0 4px 15px rgba(255, 0, 127, 0.35);
+            margin-top: auto;
+        }
+
+        .btn-copy:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 0, 127, 0.55);
+            filter: brightness(1.1);
+        }
+
+        .btn-copy.copied {
+            background: linear-gradient(135deg, #00b074, var(--success)) !important;
+            box-shadow: 0 4px 16px rgba(0, 245, 155, 0.4) !important;
+            color: #05140d !important;
+        }
+
+        /* TOAST NOTIFICATION */
+        .toast-notify {
+            position: fixed;
+            bottom: 24px;
+            left: 50%;
+            transform: translateX(-50%) translateY(120px);
+            background: #0f0a1a;
+            border: 1px solid var(--neon-cyan);
+            box-shadow: 0 8px 30px rgba(0, 240, 255, 0.35);
+            color: #fff;
+            padding: 14px 24px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            z-index: 1000;
+            opacity: 0;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            pointer-events: none;
+        }
+
+        .toast-notify.show {
+            transform: translateX(-50%) translateY(0);
+            opacity: 1;
+        }
+
+        /* LIGHTBOX MODAL */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.88);
+            backdrop-filter: blur(10px);
+            z-index: 2000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .modal-overlay.open {
+            display: flex;
+        }
+
+        .modal-content {
+            max-width: 90vw;
+            max-height: 90vh;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .modal-img {
+            max-width: 100%;
+            max-height: 80vh;
+            border-radius: 14px;
+            border: 1px solid var(--border-subtle);
+            box-shadow: 0 0 35px rgba(0, 240, 255, 0.25);
+            object-fit: contain;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: -45px;
+            right: 0;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #fff;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 1.1rem;
+            transition: all 0.2s ease;
+        }
+
+        .modal-close:hover {
+            background: var(--neon-pink);
+        }
+
+        /* FOOTER */
+        .footer {
+            margin-top: 50px;
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid var(--border-subtle);
+            width: 100%;
+        }
+
+        .footer-logo {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 14px;
+            filter: drop-shadow(0 0 14px var(--neon-pink-glow));
+        }
+
+        .footer-text {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin-bottom: 18px;
+            line-height: 1.5;
+        }
+
+        .footer-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .footer-btn {
+            padding: 10px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s ease;
+        }
+
+        .btn-discord {
+            background: #5865F2;
+            color: #fff;
+        }
+
+        .btn-discord:hover {
+            box-shadow: 0 0 18px rgba(88, 101, 242, 0.6);
+            transform: translateY(-2px);
+        }
+
+        .btn-instagram {
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            color: #fff;
+        }
+
+        .btn-instagram:hover {
+            box-shadow: 0 0 18px rgba(220, 39, 67, 0.6);
+            transform: translateY(-2px);
+        }
+
+        /* EMPTY STATE */
+        .empty-state {
+            text-align: center;
+            padding: 50px 20px;
+            color: var(--text-muted);
+        }
+
+        .empty-state i {
+            font-size: 2.8rem;
+            color: var(--neon-pink);
+            margin-bottom: 16px;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 18px 12px 60px 12px;
+            }
+            .prompts-grid {
+                grid-template-columns: 1fr;
+            }
+            .nav-bar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="grid-overlay"></div>
+
+    <div class="container">
+        
+        <!-- NAV BAR -->
+        <nav class="nav-bar">
+            <a href="../index.html" class="back-link">
+                <i class="fa-solid fa-arrow-left"></i> Voltar ao Hub Guris GTA
+            </a>
+            <div class="nav-community">
+                <img src="../assets/emblem.png" alt="Logo Guris Theft Auto">
+                <span>Bolicho Oficial GTAVI</span>
+            </div>
+        </nav>
+
+        <!-- HERO SECTION -->
+        <header class="hero">
+            <div class="badge-live">
+                <i class="fa-solid fa-bolt"></i> IA Generator Hub • Leonida Edition
+            </div>
+            <h1 class="hero-title">GALERIA DE PROMPTS<br>VICE CITY & GTA VI</h1>
+            <p class="hero-subtitle">
+                Copie os prompts testados e calibrados para transformar suas fotos pessoais na estética de ilustração oficial da Rockstar Games.
+            </p>
+
+            <!-- GUIA RÁPIDO -->
+            <div class="tutorial-card">
+                <div class="tutorial-header" onclick="toggleTutorial()">
+                    <h3><i class="fa-solid fa-wand-magic-sparkles"></i> Como usar na sua foto (3 Passos Rápidos)</h3>
+                    <i class="fa-solid fa-chevron-down" id="tutorial-arrow" style="color: var(--neon-cyan); transition: transform 0.2s ease;"></i>
+                </div>
+                <div class="tutorial-steps" id="tutorial-steps">
+                    <div class="step-item">
+                        <div class="step-num">1</div>
+                        <div class="step-text">
+                            <h4>Escolha & Copie</h4>
+                            <p>Selecione um dos estilos abaixo e clique em <b>Copiar Prompt</b>.</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-num">2</div>
+                        <div class="step-text">
+                            <h4>Suba sua Foto</h4>
+                            <p>No Midjourney, Fooocus, Leonardo ou SeaArt, envie sua foto como <b>Image Prompt</b> ou <b>Face Reference</b>.</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-num">3</div>
+                        <div class="step-text">
+                            <h4>Gere sua Arte</h4>
+                            <p>Cole o prompt, ajuste o peso da imagem (Image Weight ~ 0.5 a 0.8) e crie sua versão Vice City!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- CONTROLS: TABS & SEARCH -->
+        <div class="controls-bar">
+            <!-- Tabs de Estilos -->
+            <div class="tabs-list" id="tabs-container">
+                <!-- Injetado dinamicamente via JS -->
+            </div>
+
+            <!-- Busca rápida -->
+            <div class="search-wrap">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="search-input" class="search-input" placeholder="Buscar por estilo, elemento (ex: retratos, sunset, neon)...">
+            </div>
+        </div>
+
+        <!-- CONTAINER DAS SEÇÕES DE ESTILOS -->
+        <main id="gallery-container">
+            <!-- Injetado via prompts-data.js -->
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <img src="../assets/emblem.png" alt="Guris Theft Auto" class="footer-logo">
+            <p class="footer-text">
+                <b>Guris Theft Auto</b> • O Pampa Neon invadiu Leonida.<br>
+                Criado para a comunidade brasileira de GTA 6.
+            </p>
+            <div class="footer-buttons">
+                <a href="https://discord.gg/AShVzsztbK" target="_blank" class="footer-btn btn-discord">
+                    <i class="fa-brands fa-discord"></i> Entrar no Discord
+                </a>
+                <a href="https://instagram.com/guristheftauto" target="_blank" class="footer-btn btn-instagram">
+                    <i class="fa-brands fa-instagram"></i> Seguir @guristheftauto
+                </a>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- TOAST NOTIFICAÇÃO -->
+    <div class="toast-notify" id="toast">
+        <i class="fa-solid fa-circle-check" style="color: var(--neon-cyan); font-size: 1.1rem;"></i>
+        <span id="toast-text">Prompt copiado para a área de transferência!</span>
+    </div>
+
+    <!-- LIGHTBOX MODAL -->
+    <div class="modal-overlay" id="lightbox-modal" onclick="closeLightbox(event)">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <button class="modal-close" onclick="closeLightbox()">&times;</button>
+            <img src="" alt="Ampliação da Foto" class="modal-img" id="lightbox-img">
+        </div>
+    </div>
+
+    <!-- CARREGA BASE DE DADOS DOS PROMPTS -->
+    <script src="prompts-data.js"></script>
+
+    <!-- SCRIPT DE RENDERIZAÇÃO & INTERAÇÕES -->
+    <script>
+        let currentFilter = "all";
+        let searchQuery = "";
+
+        // Inicializa ao carregar a página
+        document.addEventListener("DOMContentLoaded", () => {
+            // Verifica hash da URL (ex: #estilo-1)
+            const hash = window.location.hash.replace("#", "");
+            if (hash && STYLES_DATA.some(s => s.id === hash)) {
+                currentFilter = hash;
+            }
+
+            renderTabs();
+            renderGallery();
+
+            // Listener de busca
+            document.getElementById("search-input").addEventListener("input", (e) => {
+                searchQuery = e.target.value.toLowerCase().trim();
+                renderGallery();
+            });
+
+            // Se tiver hash, rola suavemente até o estilo
+            if (hash) {
+                setTimeout(() => {
+                    const targetEl = document.getElementById(hash);
+                    if (targetEl) {
+                        targetEl.scrollIntoView({ behavior: "smooth", block: "start" });
+                    }
+                }, 300);
+            }
+        });
+
+        // Escuta mudanças de hash na URL (ex: usuário clicou em link direto no direct do Instagram)
+        window.addEventListener("hashchange", () => {
+            const hash = window.location.hash.replace("#", "");
+            if (hash && STYLES_DATA.some(s => s.id === hash)) {
+                selectTab(hash);
+            } else if (!hash) {
+                selectTab("all");
+            }
+        });
+
+        // Renderiza botões das abas
+        function renderTabs() {
+            const tabsContainer = document.getElementById("tabs-container");
+            tabsContainer.innerHTML = "";
+
+            // Aba "Todos"
+            const allBtn = document.createElement("button");
+            allBtn.className = `tab-btn ${currentFilter === "all" ? "active" : ""}`;
+            allBtn.innerHTML = `<i class="fa-solid fa-fire"></i> Todos os Combos`;
+            allBtn.onclick = () => selectTab("all");
+            tabsContainer.appendChild(allBtn);
+
+            // Abas de cada estilo
+            STYLES_DATA.forEach(style => {
+                const btn = document.createElement("button");
+                btn.className = `tab-btn ${currentFilter === style.id ? "active" : ""}`;
+                btn.innerHTML = `<i class="fa-solid ${style.icon || 'fa-palette'}"></i> ${style.badge || style.name}`;
+                btn.onclick = () => selectTab(style.id);
+                tabsContainer.appendChild(btn);
+            });
+        }
+
+        // Alterna aba selecionada
+        function selectTab(tabId) {
+            currentFilter = tabId;
+            if (tabId === "all") {
+                history.replaceState(null, null, window.location.pathname);
+            } else {
+                history.replaceState(null, null, `#${tabId}`);
+            }
+            renderTabs();
+            renderGallery();
+        }
+
+        // Renderiza a galeria completa
+        function renderGallery() {
+            const container = document.getElementById("gallery-container");
+            container.innerHTML = "";
+
+            const filteredStyles = STYLES_DATA.filter(style => {
+                if (currentFilter !== "all" && style.id !== currentFilter) {
+                    return false;
+                }
+                return true;
+            });
+
+            let totalMatches = 0;
+
+            filteredStyles.forEach(style => {
+                // Filtra itens com base na busca
+                const matchingItems = style.items.filter(item => {
+                    if (!searchQuery) return true;
+                    const fullText = (item.title + " " + item.prompt + " " + (item.tags ? item.tags.join(" ") : "")).toLowerCase();
+                    return fullText.includes(searchQuery);
+                });
+
+                if (matchingItems.length === 0) return;
+                totalMatches += matchingItems.length;
+
+                const section = document.createElement("section");
+                section.className = "style-section";
+                section.id = style.id;
+
+                section.innerHTML = `
+                    <div class="style-header">
+                        <span class="style-badge-tag">${style.badge || 'COMBO'}</span>
+                        <h2 class="style-title">${style.name}</h2>
+                        <p class="style-desc">${style.description}</p>
+                    </div>
+                    <div class="prompts-grid" id="grid-${style.id}"></div>
+                `;
+
+                container.appendChild(section);
+
+                const grid = section.querySelector(`#grid-${style.id}`);
+
+                matchingItems.forEach(item => {
+                    const card = document.createElement("div");
+                    card.className = "prompt-card";
+
+                    const tagsHtml = item.tags ? item.tags.map(t => `<span class="tag-pill">#${t}</span>`).join("") : "";
+
+                    card.innerHTML = `
+                        <div class="card-img-wrap" onclick="openLightbox('${item.image}')">
+                            <img src="${item.image}" alt="${item.title}" loading="lazy" onerror="this.src='../assets/banner.jpg'">
+                            <span class="card-zoom-badge"><i class="fa-solid fa-expand"></i> Ver Foto</span>
+                            <span class="card-id-badge">${item.id}</span>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">${item.title}</h3>
+                            <div class="tags-row">${tagsHtml}</div>
+                            <div class="prompt-box" id="box-${item.id}">${item.prompt}</div>
+                            <button class="btn-copy" id="btn-${item.id}" onclick="copyPrompt('${item.id}', this)">
+                                <i class="fa-regular fa-copy"></i> Copiar Prompt
+                            </button>
+                        </div>
+                    `;
+
+                    grid.appendChild(card);
+                });
+            });
+
+            if (totalMatches === 0) {
+                container.innerHTML = `
+                    <div class="empty-state">
+                        <i class="fa-solid fa-box-open"></i>
+                        <h3>Nenhum prompt encontrado para essa busca.</h3>
+                        <p>Tente buscar por outros termos como "sunset", "neon" ou mude o combo selecionado.</p>
+                    </div>
+                `;
+            }
+        }
+
+        // Função de Copiar Prompt
+        function copyPrompt(itemId, buttonEl) {
+            let promptText = "";
+            
+            // Localiza o texto do prompt
+            for (const style of STYLES_DATA) {
+                const found = style.items.find(i => i.id === itemId);
+                if (found) {
+                    promptText = found.prompt;
+                    if (found.parameters) {
+                        promptText += " " + found.parameters;
+                    }
+                    break;
+                }
+            }
+
+            if (!promptText) return;
+
+            navigator.clipboard.writeText(promptText).then(() => {
+                // Feedback visual no botão
+                const originalHtml = buttonEl.innerHTML;
+                buttonEl.classList.add("copied");
+                buttonEl.innerHTML = `<i class="fa-solid fa-check"></i> Prompt Copiado! 🌴`;
+
+                showToast("Prompt copiado! Cole na sua IA favorita.");
+
+                setTimeout(() => {
+                    buttonEl.classList.remove("copied");
+                    buttonEl.innerHTML = originalHtml;
+                }, 2400);
+            }).catch(err => {
+                showToast("Erro ao copiar. Selecione o texto manualmente.");
+            });
+        }
+
+        // Toast
+        let toastTimeout;
+        function showToast(message) {
+            const toast = document.getElementById("toast");
+            const toastText = document.getElementById("toast-text");
+            toastText.textContent = message;
+            toast.classList.add("show");
+
+            clearTimeout(toastTimeout);
+            toastTimeout = setTimeout(() => {
+                toast.classList.remove("show");
+            }, 3000);
+        }
+
+        // Lightbox
+        function openLightbox(imgSrc) {
+            const modal = document.getElementById("lightbox-modal");
+            const img = document.getElementById("lightbox-img");
+            img.src = imgSrc;
+            modal.classList.add("open");
+        }
+
+        function closeLightbox() {
+            const modal = document.getElementById("lightbox-modal");
+            modal.classList.remove("open");
+        }
+
+        // Toggle do Guia Rápido
+        let tutorialOpen = true;
+        function toggleTutorial() {
+            const steps = document.getElementById("tutorial-steps");
+            const arrow = document.getElementById("tutorial-arrow");
+            tutorialOpen = !tutorialOpen;
+            if (tutorialOpen) {
+                steps.style.display = "grid";
+                arrow.style.transform = "rotate(0deg)";
+            } else {
+                steps.style.display = "none";
+                arrow.style.transform = "rotate(-90deg)";
+            }
+        }
+    </script>
+</body>
+</html>
