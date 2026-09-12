@@ -640,63 +640,44 @@
         .footer {
             margin-top: 50px;
             text-align: center;
-            padding-top: 30px;
+            padding-top: 32px;
+            padding-bottom: 32px;
             border-top: 1px solid var(--border-subtle);
             width: 100%;
         }
 
         .footer-logo {
-            width: 50px;
-            height: 50px;
+            width: 52px;
+            height: 52px;
             margin-bottom: 14px;
-            filter: drop-shadow(0 0 14px var(--neon-pink-glow));
+            filter: drop-shadow(0 0 16px var(--neon-pink-glow));
+            transition: transform 0.3s ease;
         }
 
-        .footer-text {
-            color: var(--text-muted);
+        .footer-logo:hover {
+            transform: scale(1.08) rotate(3deg);
+        }
+
+        .footer-copy {
             font-size: 0.85rem;
-            margin-bottom: 18px;
-            line-height: 1.5;
+            color: rgba(255, 255, 255, 0.65);
+            margin-bottom: 6px;
         }
 
-        .footer-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 12px;
-            flex-wrap: wrap;
+        .footer-copy strong {
+            background: linear-gradient(90deg, #ff007f 0%, #00f0ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 800;
+            text-shadow: 0 0 15px rgba(255, 0, 127, 0.3);
         }
 
-        .footer-btn {
-            padding: 10px 20px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-size: 0.85rem;
-            font-weight: 700;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            transition: all 0.2s ease;
+        .footer-slogan {
+            color: rgba(255, 255, 255, 0.45);
+            font-size: 0.82rem;
+            line-height: 1.6;
         }
 
-        .btn-discord {
-            background: #5865F2;
-            color: #fff;
-        }
-
-        .btn-discord:hover {
-            box-shadow: 0 0 18px rgba(88, 101, 242, 0.6);
-            transform: translateY(-2px);
-        }
-
-        .btn-instagram {
-            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-            color: #fff;
-        }
-
-        .btn-instagram:hover {
-            box-shadow: 0 0 18px rgba(220, 39, 67, 0.6);
-            transform: translateY(-2px);
-        }
 
         /* EMPTY STATE */
         .empty-state {
@@ -806,18 +787,8 @@
         <!-- FOOTER -->
         <footer class="footer">
             <img src="../assets/emblem.png" alt="Guris Theft Auto" class="footer-logo">
-            <p class="footer-text">
-                <b>Guris Theft Auto</b> • O Pampa Neon invadiu Leonida.<br>
-                Criado para a comunidade brasileira de GTA 6.
-            </p>
-            <div class="footer-buttons">
-                <a href="https://discord.gg/AShVzsztbK" target="_blank" class="footer-btn btn-discord">
-                    <i class="fa-brands fa-discord"></i> Entrar no Discord
-                </a>
-                <a href="https://instagram.com/guristheftauto" target="_blank" class="footer-btn btn-instagram">
-                    <i class="fa-brands fa-instagram"></i> Seguir @guristheftauto
-                </a>
-            </div>
+            <p class="footer-copy">© 2026 <strong>🌴 Guris Theft Auto 🧉</strong> • Todos os direitos reservados.</p>
+            <p class="footer-slogan">Onde o chimarrão é amargo e ferve tanto quanto o asfalto de Vice City.</p>
         </footer>
 
     </div>
