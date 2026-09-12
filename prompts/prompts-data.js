@@ -397,7 +397,7 @@ const STYLES_DATA = [
       {
         id: "e3-01",
         title: "01. Club Neon (Tony Montana / Scarface)",
-        image: "../assets/prompts/estilo-3/01_tony_montana_club.png",
+        image: "../assets/prompts/estilo-3/01_tony_montana_club.jpg",
         prompt: `[Transform this image into a modern Grand Theft Auto VI-inspired visual style.
 
 Preserve the original composition, subject identity, pose, and facial features, but enhance it with a highly polished, next-gen video game aesthetic.
@@ -429,7 +429,7 @@ A cinematic, next-generation GTA VI-style render that looks like a character fro
       {
         id: "e3-02",
         title: "02. Presidential Suite (Donald Trump Leonida)",
-        image: "../assets/prompts/estilo-3/02_donald_trump_office.png",
+        image: "../assets/prompts/estilo-3/02_donald_trump_office.jpg",
         prompt: `[Transform this image into a modern Grand Theft Auto VI-inspired visual style.
 
 Preserve the original composition, subject identity, pose, and facial features, but enhance it with a highly polished, next-gen video game aesthetic.
@@ -457,6 +457,287 @@ A cinematic, next-generation GTA VI-style render that looks like a character fro
         negativePrompt: "cartoon, comic, 3D anime, flat textures, low quality, oversaturated cartoon",
         parameters: "Image-to-Image (Nano Banana Pro / Gemini / Midjourney v6.1)",
         tags: ["Cinematic", "Next-Gen AAA", "Golden Sunset", "Grounded Realism"]
+      },
+      {
+        id: "e3-03",
+        title: "03. Sol de Vice Beach (Musa Canarinho)",
+        image: "../assets/prompts/estilo-3/03_loira_praia_brasil.jpg",
+        prompt: `[Transform this image into a modern Grand Theft Auto VI-inspired visual style.
+
+Preserve the original composition, subject identity, pose, and facial features, but enhance it with a highly polished, next-gen video game aesthetic.
+
+Apply:
+- Ultra-realistic rendering with cinematic lighting
+- High dynamic range (HDR), realistic shadows and reflections
+- Detailed skin textures and natural imperfections (not cartoonish)
+- Subtle stylization inspired by GTA VI character design (modern, grounded, semi-realistic — NOT exaggerated or comic-like)
+- Vibrant but controlled color grading (Miami/Vice City-inspired tones, warm highlights, teal shadows)
+- Depth of field and environmental atmosphere for immersion
+- Clean, sharp focus with AAA video game quality
+
+Environment:
+- If applicable, enhance background to feel like a living open-world city (modern Vice City vibe: neon lights, palm trees, urban luxury, night glow or sunset lighting)
+
+Important constraints:
+- Do NOT convert into cartoon, comic, or GTA V-style illustration
+- Avoid thick outlines or exaggerated proportions
+- Maintain realism with subtle stylization only
+- Keep the subject recognizable and authentic
+
+Final result:
+A cinematic, next-generation GTA VI-style render that looks like a character from a modern AAA open-world game.]`,
+        negativePrompt: "cartoon, comic, 3D anime, flat textures, low quality, oversaturated cartoon",
+        parameters: "Image-to-Image (Nano Banana Pro / Gemini / Midjourney v6.1)",
+        tags: ["Vice Beach", "Musa", "Seleção Brasileira", "Cinematic"]
+      },
+      {
+        id: "e3-04",
+        title: "04. Vice City Sunset (Snoop Dogg Neon)",
+        image: "../assets/prompts/estilo-3/04_snoop_dogg_vice.jpg",
+        prompt: `[Transform this image into a modern Grand Theft Auto VI-inspired visual style.
+
+Preserve the original composition, subject identity, pose, and facial features, but enhance it with a highly polished, next-gen video game aesthetic.
+
+Apply:
+- Ultra-realistic rendering with cinematic lighting
+- High dynamic range (HDR), realistic shadows and reflections
+- Detailed skin textures and natural imperfections (not cartoonish)
+- Subtle stylization inspired by GTA VI character design (modern, grounded, semi-realistic — NOT exaggerated or comic-like)
+- Vibrant but controlled color grading (Miami/Vice City-inspired tones, warm highlights, teal shadows)
+- Depth of field and environmental atmosphere for immersion
+- Clean, sharp focus with AAA video game quality
+
+Environment:
+- If applicable, enhance background to feel like a living open-world city (modern Vice City vibe: neon lights, palm trees, urban luxury, night glow or sunset lighting)
+
+Important constraints:
+- Do NOT convert into cartoon, comic, or GTA V-style illustration
+- Avoid thick outlines or exaggerated proportions
+- Maintain realism with subtle stylization only
+- Keep the subject recognizable and authentic
+
+Final result:
+A cinematic, next-generation GTA VI-style render that looks like a character from a modern AAA open-world game.]`,
+        negativePrompt: "cartoon, comic, 3D anime, flat textures, low quality, oversaturated cartoon",
+        parameters: "Image-to-Image (Nano Banana Pro / Gemini / Midjourney v6.1)",
+        tags: ["Snoop Dogg", "Vice City Sunset", "Neon", "HDR"]
+      },
+      {
+        id: "e3-05",
+        title: "05. Palco ao Pôr do Sol (Ice Cube Vice)",
+        image: "../assets/prompts/estilo-3/05_ice_cube_vice.jpg",
+        prompt: `[Transform this image into a modern Grand Theft Auto VI-inspired visual style.
+
+Preserve the original composition, subject identity, pose, and facial features, but enhance it with a highly polished, next-gen video game aesthetic.
+
+Apply:
+- Ultra-realistic rendering with cinematic lighting
+- High dynamic range (HDR), realistic shadows and reflections
+- Detailed skin textures and natural imperfections (not cartoonish)
+- Subtle stylization inspired by GTA VI character design (modern, grounded, semi-realistic — NOT exaggerated or comic-like)
+- Vibrant but controlled color grading (Miami/Vice City-inspired tones, warm highlights, teal shadows)
+- Depth of field and environmental atmosphere for immersion
+- Clean, sharp focus with AAA video game quality
+
+Environment:
+- If applicable, enhance background to feel like a living open-world city (modern Vice City vibe: neon lights, palm trees, urban luxury, night glow or sunset lighting)
+
+Important constraints:
+- Do NOT convert into cartoon, comic, or GTA V-style illustration
+- Avoid thick outlines or exaggerated proportions
+- Maintain realism with subtle stylization only
+- Keep the subject recognizable and authentic
+
+Final result:
+A cinematic, next-generation GTA VI-style render that looks like a character from a modern AAA open-world game.]`,
+        negativePrompt: "cartoon, comic, 3D anime, flat textures, low quality, oversaturated cartoon",
+        parameters: "Image-to-Image (Nano Banana Pro / Gemini / Midjourney v6.1)",
+        tags: ["Ice Cube", "Show de Sunset", "Miami", "Cinematic"]
+      }
+    ]
+  },
+  {
+    id: "estilo-4",
+    badge: "COMBO 04",
+    name: "Estilo 04: GTA V In-Game 3D Engine (Los Santos Mesh)",
+    slug: "estilo-4",
+    icon: "fa-gamepad",
+    description: "Conversão direta para modelos 3D poligonais do motor gráfico de GTA V / Los Santos. Personagens como meshes in-game com props como celular iFruit, NPCs de praia e iluminação dinâmica.",
+    toolRecommended: "Nano Banana Pro / Gemini / SeaArt",
+    items: [
+      {
+        id: "e4-01",
+        title: "01. Encontro de Lendas (Snoop, 50 Cent & Ice Cube)",
+        image: "../assets/prompts/estilo-4/01_trio_snoop_50cent_icecube.jpg",
+        prompt: `{
+  "scene_translation_details": {
+    "characters": "Rebuild all humans as detailed GTA V NPC or protagonist models. Their poses and expressions must match the reference, but they must clearly look like computer-generated 3D character meshes.",
+    "environment_and_objects": "Substitute every real-world object with its closest Los Santos equivalent model. A real iPhone becomes an in-game 'iFruit' phone prop. Real foliage becomes game-engine trees/bushes. The background beach and pier with girls wearing bikinis, NPCs dressed in beachwear must be rendered with GTA V asset libraries.",
+    "lighting_and_atmosphere": "Recreate the lighting direction and mood from the reference, but render it using GTA V's dynamic lighting and shadow system. Add typical in-game atmospheric haze for depth."
+  },
+  "output_requirements": {
+    "type": "Clean 4K gameplay screenshot. No UI/HUD.",
+    "sharpness": "Standard gameplay camera focus. Avoid excessive cinematic blur; textures should be visible."
+  },
+  "negative_prompt": {
+    "forbidden_elements": [
+      "Applying a filter over the original image",
+      "Just changing colors without changing textures",
+      "Hyper-realistic photography",
+      "Loading screen illustration style",
+      "HUD, UI, Minimap",
+      "Blurry textures obscuring the game model look"
+    ]
+  }
+}`,
+        negativePrompt: "Applying a filter over the original image, Just changing colors without changing textures, Hyper-realistic photography, Loading screen illustration style, HUD, UI, Minimap, Blurry textures",
+        parameters: "Image-to-Image (Nano Banana Pro / Gemini)",
+        tags: ["GTA V", "In-Game 3D", "Los Santos", "Trio Lendário"]
+      },
+      {
+        id: "e4-02",
+        title: "02. Repórter de Del Perro (Snoop Dogg)",
+        image: "../assets/prompts/estilo-4/02_snoop_dogg_bandana.jpg",
+        prompt: `{
+  "scene_translation_details": {
+    "characters": "Rebuild all humans as detailed GTA V NPC or protagonist models. Their poses and expressions must match the reference, but they must clearly look like computer-generated 3D character meshes.",
+    "environment_and_objects": "Substitute every real-world object with its closest Los Santos equivalent model. A real iPhone becomes an in-game 'iFruit' phone prop. Real foliage becomes game-engine trees/bushes. The background beach and pier with girls wearing bikinis, NPCs dressed in beachwear must be rendered with GTA V asset libraries.",
+    "lighting_and_atmosphere": "Recreate the lighting direction and mood from the reference, but render it using GTA V's dynamic lighting and shadow system. Add typical in-game atmospheric haze for depth."
+  },
+  "output_requirements": {
+    "type": "Clean 4K gameplay screenshot. No UI/HUD.",
+    "sharpness": "Standard gameplay camera focus. Avoid excessive cinematic blur; textures should be visible."
+  },
+  "negative_prompt": {
+    "forbidden_elements": [
+      "Applying a filter over the original image",
+      "Just changing colors without changing textures",
+      "Hyper-realistic photography",
+      "Loading screen illustration style",
+      "HUD, UI, Minimap",
+      "Blurry textures obscuring the game model look"
+    ]
+  }
+}`,
+        negativePrompt: "Applying a filter over the original image, Just changing colors without changing textures, Hyper-realistic photography, Loading screen illustration style, HUD, UI, Minimap, Blurry textures",
+        parameters: "Image-to-Image (Nano Banana Pro / Gemini)",
+        tags: ["Snoop Dogg", "Bandana Azul", "Microfone GTA V", "Del Perro"]
+      },
+      {
+        id: "e4-03",
+        title: "03. Calçadão de Los Santos (Ice Cube)",
+        image: "../assets/prompts/estilo-4/03_ice_cube_los_santos.jpg",
+        prompt: `{
+  "scene_translation_details": {
+    "characters": "Rebuild all humans as detailed GTA V NPC or protagonist models. Their poses and expressions must match the reference, but they must clearly look like computer-generated 3D character meshes.",
+    "environment_and_objects": "Substitute every real-world object with its closest Los Santos equivalent model. A real iPhone becomes an in-game 'iFruit' phone prop. Real foliage becomes game-engine trees/bushes. The background beach and pier with girls wearing bikinis, NPCs dressed in beachwear must be rendered with GTA V asset libraries.",
+    "lighting_and_atmosphere": "Recreate the lighting direction and mood from the reference, but render it using GTA V's dynamic lighting and shadow system. Add typical in-game atmospheric haze for depth."
+  },
+  "output_requirements": {
+    "type": "Clean 4K gameplay screenshot. No UI/HUD.",
+    "sharpness": "Standard gameplay camera focus. Avoid excessive cinematic blur; textures should be visible."
+  },
+  "negative_prompt": {
+    "forbidden_elements": [
+      "Applying a filter over the original image",
+      "Just changing colors without changing textures",
+      "Hyper-realistic photography",
+      "Loading screen illustration style",
+      "HUD, UI, Minimap",
+      "Blurry textures obscuring the game model look"
+    ]
+  }
+}`,
+        negativePrompt: "Applying a filter over the original image, Just changing colors without changing textures, Hyper-realistic photography, Loading screen illustration style, HUD, UI, Minimap, Blurry textures",
+        parameters: "Image-to-Image (Nano Banana Pro / Gemini)",
+        tags: ["Ice Cube", "Boné Los Santos", "Del Perro Pier", "3D Mesh"]
+      },
+      {
+        id: "e4-04",
+        title: "04. Show em Vinewood (Cardi B)",
+        image: "../assets/prompts/estilo-4/04_cardi_b_stage.jpg",
+        prompt: `{
+  "scene_translation_details": {
+    "characters": "Rebuild all humans as detailed GTA V NPC or protagonist models. Their poses and expressions must match the reference, but they must clearly look like computer-generated 3D character meshes.",
+    "environment_and_objects": "Substitute every real-world object with its closest Los Santos equivalent model. A real iPhone becomes an in-game 'iFruit' phone prop. Real foliage becomes game-engine trees/bushes. The background beach and pier with girls wearing bikinis, NPCs dressed in beachwear must be rendered with GTA V asset libraries.",
+    "lighting_and_atmosphere": "Recreate the lighting direction and mood from the reference, but render it using GTA V's dynamic lighting and shadow system. Add typical in-game atmospheric haze for depth."
+  },
+  "output_requirements": {
+    "type": "Clean 4K gameplay screenshot. No UI/HUD.",
+    "sharpness": "Standard gameplay camera focus. Avoid excessive cinematic blur; textures should be visible."
+  },
+  "negative_prompt": {
+    "forbidden_elements": [
+      "Applying a filter over the original image",
+      "Just changing colors without changing textures",
+      "Hyper-realistic photography",
+      "Loading screen illustration style",
+      "HUD, UI, Minimap",
+      "Blurry textures obscuring the game model look"
+    ]
+  }
+}`,
+        negativePrompt: "Applying a filter over the original image, Just changing colors without changing textures, Hyper-realistic photography, Loading screen illustration style, HUD, UI, Minimap, Blurry textures",
+        parameters: "Image-to-Image (Nano Banana Pro / Gemini)",
+        tags: ["Cardi B", "Palco", "Vinewood", "GTA V NPC"]
+      },
+      {
+        id: "e4-05",
+        title: "05. Rolls-Royce em Rockford Hills (50 Cent)",
+        image: "../assets/prompts/estilo-4/05_50cent_car.jpg",
+        prompt: `{
+  "scene_translation_details": {
+    "characters": "Rebuild all humans as detailed GTA V NPC or protagonist models. Their poses and expressions must match the reference, but they must clearly look like computer-generated 3D character meshes.",
+    "environment_and_objects": "Substitute every real-world object with its closest Los Santos equivalent model. A real iPhone becomes an in-game 'iFruit' phone prop. Real foliage becomes game-engine trees/bushes. The background beach and pier with girls wearing bikinis, NPCs dressed in beachwear must be rendered with GTA V asset libraries.",
+    "lighting_and_atmosphere": "Recreate the lighting direction and mood from the reference, but render it using GTA V's dynamic lighting and shadow system. Add typical in-game atmospheric haze for depth."
+  },
+  "output_requirements": {
+    "type": "Clean 4K gameplay screenshot. No UI/HUD.",
+    "sharpness": "Standard gameplay camera focus. Avoid excessive cinematic blur; textures should be visible."
+  },
+  "negative_prompt": {
+    "forbidden_elements": [
+      "Applying a filter over the original image",
+      "Just changing colors without changing textures",
+      "Hyper-realistic photography",
+      "Loading screen illustration style",
+      "HUD, UI, Minimap",
+      "Blurry textures obscuring the game model look"
+    ]
+  }
+}`,
+        negativePrompt: "Applying a filter over the original image, Just changing colors without changing textures, Hyper-realistic photography, Loading screen illustration style, HUD, UI, Minimap, Blurry textures",
+        parameters: "Image-to-Image (Nano Banana Pro / Gemini)",
+        tags: ["50 Cent", "Rockford Hills", "Get The Strap", "Supercar"]
+      },
+      {
+        id: "e4-06",
+        title: "06. Detalhe Facial In-Game (50 Cent)",
+        image: "../assets/prompts/estilo-4/06_50cent_portrait.jpg",
+        prompt: `{
+  "scene_translation_details": {
+    "characters": "Rebuild all humans as detailed GTA V NPC or protagonist models. Their poses and expressions must match the reference, but they must clearly look like computer-generated 3D character meshes.",
+    "environment_and_objects": "Substitute every real-world object with its closest Los Santos equivalent model. A real iPhone becomes an in-game 'iFruit' phone prop. Real foliage becomes game-engine trees/bushes. The background beach and pier with girls wearing bikinis, NPCs dressed in beachwear must be rendered with GTA V asset libraries.",
+    "lighting_and_atmosphere": "Recreate the lighting direction and mood from the reference, but render it using GTA V's dynamic lighting and shadow system. Add typical in-game atmospheric haze for depth."
+  },
+  "output_requirements": {
+    "type": "Clean 4K gameplay screenshot. No UI/HUD.",
+    "sharpness": "Standard gameplay camera focus. Avoid excessive cinematic blur; textures should be visible."
+  },
+  "negative_prompt": {
+    "forbidden_elements": [
+      "Applying a filter over the original image",
+      "Just changing colors without changing textures",
+      "Hyper-realistic photography",
+      "Loading screen illustration style",
+      "HUD, UI, Minimap",
+      "Blurry textures obscuring the game model look"
+    ]
+  }
+}`,
+        negativePrompt: "Applying a filter over the original image, Just changing colors without changing textures, Hyper-realistic photography, Loading screen illustration style, HUD, UI, Minimap, Blurry textures",
+        parameters: "Image-to-Image (Nano Banana Pro / Gemini)",
+        tags: ["50 Cent", "Close-up", "3D Wireframe", "GTA V Engine"]
       }
     ]
   }
